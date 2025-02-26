@@ -1,43 +1,32 @@
-public class Retangulo {
-    
-    private double largura;
-    private double altura;
+public class Circulo {
+    private double raio;
 
-    public Retangulo(double largura, double altura) {
-        this.largura = largura;
-        this.altura = altura;
+    public Circulo(double raio) {
+        this.raio = raio;
     }
 
     public double calcularArea() {
-        return largura * altura;
+        return Math.PI * Math.pow(raio, 2);
     }
 
     public double calcularPerimetro() {
-        return 2 * (largura + altura);
+        return 2 * Math.PI * raio;
     }
 
-    public double getLargura() {
-        return largura;
+    public double getRaio() {
+        return raio;
     }
 
-    public void setLargura(double largura) {
-        this.largura = largura;
-    }
-
-    public double getAltura() {
-        return altura;
-    }
-
-    public void setAltura(double altura) {
-        this.altura = altura;
+    public void setRaio(double raio) {
+        this.raio = raio;
     }
 
     public static void main(String[] args) {
-        Retangulo retangulo = new Retangulo(5.0, 3.0);
-        
-        System.out.println("Largura: " + retangulo.getLargura());
-        System.out.println("Altura: " + retangulo.getAltura());
-        System.out.println("Área: " + retangulo.calcularArea());
-        System.out.println("Perímetro: " + retangulo.calcularPerimetro());
+  
+        Circulo meuCirculo = new Circulo(5.0);
+
+        System.out.println("Raio: " + meuCirculo.getRaio());
+        System.out.println("Área: " + meuCirculo.calcularArea());
+        System.out.println("Perímetro: " + meuCirculo.calcularPerimetro());
     }
 }
